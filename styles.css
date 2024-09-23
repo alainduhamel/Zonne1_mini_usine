@@ -1,3 +1,4 @@
+/* Styles généraux */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -18,10 +19,11 @@ body {
     background-size: cover; /* Couvre toute la page */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Évite la répétition de l'image */
-    filter: blur(4px); /* Flou de 5 pixels */
+    filter: blur(4px); /* Flou de 4 pixels */
     z-index: -1; /* Place la div derrière le contenu */
 }
 
+/* Styles pour l'en-tête */
 header {
     display: flex;
     justify-content: center; /* Centre le contenu du titre */
@@ -51,16 +53,15 @@ header {
     overflow: hidden; /* Cache le débordement pour l'animation */
     position: relative; /* Nécessaire pour le positionnement de l'animation */
     height: 60px; /* Hauteur fixe pour le conteneur du titre */
-    color: #8B0000; /* Nouvelle couleur du texte (rouge sombre) */
+    color: #8B0000; /* Couleur du texte (rouge sombre) */
 }
-
 
 .scrolling-title {
     display: inline-block; /* Pour que l'animation fonctionne correctement */
     position: absolute; /* Permet de le déplacer hors de l'écran */
     white-space: nowrap; /* Évite le retour à la ligne */
     font-size: 36px; /* Agrandir la taille de la police */
-    color: #8B0000; /* Couleur initiale (tomate) */
+    color: #8B0000; /* Couleur initiale (rouge sombre) */
     animation: scroll 15s linear infinite; /* Animation de défilement */
 }
 
@@ -77,6 +78,7 @@ h1 {
     margin: 0; /* Enlève la marge par défaut pour un meilleur alignement */
 }
 
+/* Styles pour le conteneur de boutons */
 .button-container {
     display: flex;
     justify-content: center;
@@ -92,7 +94,6 @@ h1 {
     width: 80%; /* Ajuste la largeur du conteneur (facultatif) */
     margin: 0 auto; /* Centre le conteneur horizontalement */
 }
-
 
 .button {
     flex: 1; /* Chaque bouton prend une part égale de l'espace */
@@ -134,5 +135,101 @@ h1 {
     }
     50% {
         opacity: 0.5; /* Moins visible */
+    }
+}
+
+/* Styles pour la section PDF */
+.pdf-section {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(240, 240, 240, 0.9); /* Fond semi-transparent */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-section h2 {
+    color: #8B0000; /* Rouge sombre pour les titres */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pdf-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.download-button-container {
+    text-align: center;
+}
+
+.download-button {
+    background-color: #8B0000; /* Rouge sombre */
+    color: #ffffff; /* Texte blanc */
+    padding: 15px 30px; /* Espacement intérieur */
+    text-align: center; /* Centre le texte */
+    text-decoration: none; /* Enlève le soulignement */
+    border-radius: 10px; /* Coins arrondis */
+    font-size: 18px; /* Taille du texte */
+    transition: background-color 0.3s, transform 0.2s; /* Transitions pour les effets */
+}
+
+.download-button:hover {
+    background-color: #B22222; /* Rouge clair au survol */
+    transform: translateY(-2px); /* Effet d'élévation au survol */
+}
+
+/* Styles pour la section d'images */
+.image-section {
+    text-align: center; /* Centre le contenu de la section */
+    margin: 20px 0; /* Espace autour de la section */
+}
+
+.image-container {
+    display: flex; /* Utilise le flex pour aligner les images */
+    justify-content: center; /* Centre les images */
+    gap: 20px; /* Espace entre les images */
+}
+
+figure {
+    margin: 10px; /* Marge autour de chaque figure */
+    text-align: center; /* Centre le texte du titre */
+}
+
+.image {
+    width: 400px; /* Ajustez la taille de l'image */
+    height: 300px; /* Fixez la hauteur pour uniformiser les tailles */
+    object-fit: cover; /* Couvre le cadre sans déformation */
+    border-radius: 10px; /* Coins arrondis (facultatif) */
+    border: 2px solid #8B0000; /* Bordure autour de chaque image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour l'effet de profondeur */
+    transition: transform 0.3s; /* Transition pour un effet d'agrandissement */
+}
+
+.image:hover {
+    transform: scale(1.05); /* Agrandissement au survol */
+}
+
+figcaption {
+    margin-top: 5px; /* Espace au-dessus du titre */
+    font-size: 16px; /* Taille de police pour le titre */
+    color: #fff; /* Couleur du texte (blanc pour contraster) */
+}
+
+/* Adaptation responsive pour le PDF */
+@media (max-width: 768px) {
+    .pdf-container embed {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pdf-container embed {
+        height: 300px;
+    }
+
+    .download-button {
+        font-size: 16px;
+        padding: 12px 25px;
     }
 }
