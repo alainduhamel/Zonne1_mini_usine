@@ -3,187 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fiches techniques électriques.">
-    <title>Fiches Techniques Électriques</title>
-    <style>
-        /* Styles généraux */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f9f9f9;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Styles pour l'en-tête */
-        header {
-            display: flex;
-            justify-content: center;
-            background-color: #8B0000; /* Couleur rouge sombre */
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            width: 100%;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-
-        .logo {
-            width: 200px;
-        }
-
-        /* Styles pour le titre */
-        .title-header {
-            text-align: center;
-            background-color: #f0f0f0;
-            padding: 10px 0;
-            width: 100%;
-        }
-
-        .title-header h1 {
-            font-size: 2.5em;
-            color: #8B0000; /* Couleur rouge sombre */
-            margin: 0;
-        }
-
-        /* Styles pour les sections */
-        .image-download-section {
-            padding: 40px 20px;
-            background-color: #ffffff; /* Fond blanc pour le contenu */
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .image-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            max-width: 1200px;
-        }
-
-        figure {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s;
-            text-align: center;
-        }
-
-        figure:hover {
-            transform: translateY(-5px);
-        }
-
-        .download-image {
-            width: 150px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            transition: filter 0.3s;
-        }
-
-        figure:hover .download-image {
-            filter: brightness(0.9);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        figcaption {
-            color: #333;
-            padding: 10px 0;
-        }
-
-        .download-button {
-            display: inline-block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            background-color: #8B0000; /* Couleur rouge sombre */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .download-button:hover {
-            background-color: #a00000; /* Couleur légèrement plus claire */
-            transform: scale(1.05);
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .image-container {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    <meta name="description" content="Description de votre site.">
+    <title>Mon Site</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="background"></div>
     <header>
         <div class="header-container">
             <div class="logo-container">
                 <img src="https://irp.cdn-website.com/40f02799/dms3rep/multi/LOGO_UNILASALLE_AMIENS_QUADRI.png" alt="Mon Logo" class="logo">
             </div>
-            <a href="" class="database-button"></a>
+            <a href="acceder_a_la_base_de_donnees.html" class="database-button">Accéder à la base de données NAS</a>
         </div>
     </header>
     <header class="title-header">
-        <h1>Fiches Techniques Électriques</h1>
+        <h1 class="scrolling-title">Mini Usine Zone 1 Alimentation</h1>
     </header>
     <main>
-        <section>
-            <h2></h2>
-            <p></p>
-        </section>
-
-        <!-- Section des images téléchargeables -->
-        <section class="image-download-section">
-            <h2>Téléchargez les Fiches Techniques</h2>
-            <div class="image-container">
-                <figure>
-                    <img src="https://github.com/alainduhamel/Zonne1_mini_usine/blob/main/listes%20des%20plans%20et%20sch%C3%A9mas.JPG?raw=true" alt="Liste des plans et schéma" class="download-image">
-                    <figcaption>Liste des plans et schémas</figcaption>
-                    <a href="https://github.com/alainduhamel/Zonne1_mini_usine/blob/main/listes%20des%20plans%20et%20sch%C3%A9mas.JPG?raw=true" download class="download-button">Télécharger</a>
-                </figure>
-                <figure>
-                    <img src="https://github.com/alainduhamel/Zonne1_mini_usine/blob/main/listes%20des%20fiches%20techniques.JPG?raw=true" alt="Liste des fiches techniques" class="download-image">
-                    <figcaption>Liste des fiches techniques</figcaption>
-                    <a href="https://github.com/alainduhamel/Zonne1_mini_usine/blob/main/listes%20des%20fiches%20techniques.JPG?raw=true" download class="download-button">Télécharger</a>
-                </figure>
-                <figure>
-                    <img src="https://github.com/alainduhamel/Zonne1_mini_usine/blob/main/listes%20de%20composants%201.JPG?raw=true" alt="Liste des composants" class="download-image">
-                    <figcaption>Liste des composants</figcaption>
-                    <a href="https://github.com/alainduhamel/Zonne1_mini_usine/blob/main/listes%20de%20composants%201.JPG?raw=true" download class="download-button">Télécharger</a>
-                </figure>
-                <figure>
-                    <img src="https://github.com/alainduhamel/Zonne1_mini_usine/blob/main/description%20g%C3%A9n%C3%A9rale.JPG?raw=true" alt="Description générale" class="download-image">
-                    <figcaption>Description générale</figcaption>
-                    <a href="https://github.com/alainduhamel/Zonne1_mini_usine/blob/main/description%20g%C3%A9n%C3%A9rale.JPG?raw=true" download class="download-button">Télécharger</a>
-                </figure>
-                <figure>
-                    <img src="https://github.com/alainduhamel/Zonne1_mini_usine/blob/main/description%20du%20convoyeur.JPG?raw=true" alt="Description du convoyeur" class="download-image">
-                    <figcaption>Description du convoyeur</figcaption>
-                    <a href="https://github.com/alainduhamel/Zonne1_mini_usine/blob/main/description%20du%20convoyeur.JPG?raw=true" download class="download-button">Télécharger</a>
-                </figure>
-                <figure>
-                    <img src="https://github.com/alainduhamel/Zonne1_mini_usine/blob/main/description%20de%20la%20tremie.JPG?raw=true" alt="Description de la trémie" class="download-image">
-                    <figcaption>Description de la trémie</figcaption>
-                    <a href="https://github.com/alainduhamel/Zonne1_mini_usine/blob/main/description%20de%20la%20tremie.JPG?raw=true" download class="download-button">Télécharger</a>
-                </figure>
+        <div class="button-container">
+            <div class="button-row">
+                <a href="mode_operatoire.html" class="button">Mode Opératoire</a>
+                <a href="Fiches_techniques_electrique.html" class="button">Fiches techniques électrique</a>
+                <a href="liste_entrees_sorties.html" class="button">Liste des Entrées & Sorties</a>
+                <a href="principe_fonctionnement.html" class="button">Principe de fonctionnement</a>
             </div>
-        </section>
+        </div>
     </main>
 </body>
 </html>
